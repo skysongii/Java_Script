@@ -1,0 +1,97 @@
+자바스크립트를 이용해 웹 브라우저 홤녀에 변수나 데이터를 출력하는 방법은 네 가지가 있다.
+1. document.write() 
+2. window.alert()
+3. console.log()
+4. innerHtml 
+
+document.wirte() 는 가장 간단한 방법이지만 실제 프로그램에서는 잘 사용하지 않는다. ( 사용법이 간단해 공부할 때 좋음 )
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+  <script>
+    var a;  // 변수 a를 선언한다. (스크립트에서는 주석은 '/* */' 혹은 '//' 를 사용한다.
+    a = 3;  // 변수 a에 숫자 3을 대입한다.
+    document.write(a);  // a를 출력한다.
+  </script>
+  </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+         <style>
+            p {
+                background-color:brown ;
+                color: chartreuse;
+            }
+         </style>
+    </head>
+    <body>
+        <script>
+            var a;
+            a = 3;
+            document.write(
+                <p>a</p>  // 변수 같은 값에도 색을 적용할 수 있을까 싶어 스타일을 넣어봤는데 적용이 안된다. 아직 방법을 모르겠다.
+            );
+
+        </script>
+    </body>
+</html>
+
+변수를 이용해 간단한 계산을 해보았다.
+타 프로그래밍과 같이 문자도 덧셈이 될까싶어 적용을 해보았다.
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<script>
+    // var a = 10;
+    // var b = 20;
+    // c = a + b
+    // document.write(c);
+
+    var str1 = '안녕'
+    var str2 = ' 하세요'
+    str3 = str1 + str2
+    document.write(str3);
+</script>
+</body>
+</html>
+
+결과는 '안녕 하세요' 가 정상적으로 출력되었다.
+
+window.alert() 함수를 쓰면서 갑작스럽게 생각이 든게
+아까 적용시키지 못했던 변수에 색넣기가 변수를 선언할 때에 넣으면 될까 싶었다.
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <style>
+        p {
+            background-color: chocolate;
+        }
+    </style>
+</head>	
+<body>
+<script>
+    var name = "<p>홍길동</p>";
+    window.alert(name);
+</script>
+</body>
+</html>
+
+결과는 안됐다.
+추가로 window.alert() 함수 안에 텍스트를 넣어서 스타일을 적용시켜볼까 했지만
+알림창에 그대로 <p> ~~~ </p> 이렇게 뜨더라.
