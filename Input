@@ -1,0 +1,32 @@
+입력은 prompt()를 이용한다.
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8">
+  <head>
+  <body>
+    <script>
+      var name = prompt("이름을 입력하세요: ");
+      documnet.write(name);
+    </script>
+  </body>
+</html>
+
+위 상태로 실행을 하게 되면 창에 데이터를 입력하는 공간이 나오며, 데이터를 입력하게 되면 입력한 데이터가 name에 대입되고, document.write 출력함수 안에 있는 name 즉 입력한 데이터가 
+출력이 된다.
+
+이 상태로 연산을 해보면 어떨까 하고 생각을 했다.
+
+<script>
+var x = prompt("숫자 1 입력: ");
+    var y = prompt("숫자 2 입력: ");
+    document.write(x + y);
+</script>
+
+문자열이기 떄문에 숫자를 입력해도 문자열에 관한 연산이 이루어진다.
+x에 10을, y에 20을 대입했다고 가정했을 때 결과는 1020이 나오게 된다.
+숫자로 연산을 하려면
+밑에 x = number(x);
+     y = number(y);
+를 추가해주면 된다.
