@@ -1,0 +1,14 @@
+ <!-- 최고 기온과 최저 기온을 입력받아 일교차를 구하는 프로그램-->
+  <script>
+            var max_temperature = Number(prompt("최고 기온을 입력하세요: "));
+            var min_temperature = Number(prompt("최저 기온을 입력하세요: "));
+            
+            var daily_range = max_temperature - min_temperature;
+
+            document.write("- 최고 기온 : " + max_temperature + "도<br>");
+            document.write("- 최저 기온 : " + min_temperature + "도<br>");
+            document.write("일교차는 " + daily_range + "입니다.");
+            
+        </script>
+        
+ Q2-1에서 이런 방법으로도 할 수 있겠구나 라고 했던 것이 다음 문제에 나왔다
