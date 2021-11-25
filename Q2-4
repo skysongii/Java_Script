@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            // 센티미터를 입력받아 인치로 환산하는 프로그램 작성
+            /* var inch;
+            var input_cm = prompt("센티미터를 입력하세요 : ");
+            var inch = input_cm * 2.54;
+
+            document.write("센티미터 : " + input_cm +"cm=> " + "인치 : " + inch + "inch"); */
+
+            // 반지름을 입력받아 원의 넓이를 구하는 프로그램 작성
+            var area;
+            var radius;
+            var pi = 3.14;
+            
+            radius = Number(prompt("반지름을 입력하세요 : "));
+            area = radius * radius * pi;
+            
+            document.write("반지름 : " + radius + "<br>");
+            document.write("원의 넓이 : " + area + "입니다");
+
+        </script>
+    </body>
+</html>
+ 처음에는 area 식을 var pi = 3.14; 아래에 넣었더니 에러가 나 생각해보니 radius가 정의되지 않아서 순서를 밑으로 내렸다
+ 결과는 정상적으로 실행되었다.
