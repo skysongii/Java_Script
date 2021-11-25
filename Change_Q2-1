@@ -15,7 +15,7 @@
     <script>
       // 방법 1. 텍스트만 이용    
       /*
-      document.write("- 개당 가격 : 1500원<br>");
+      document.write("- 개당 가격 : 1500원<br>");      // 방법 1은 출력문을 일일이 텍스트 입력으로 결과물을 만든 것이다.
       document.wirte("- 구매 개수 : 3개<br>");
       documnet.write("- 지불 금액 : 10000원<br>");
       document.write("거스름돈은 5500원입니다.");
@@ -23,7 +23,7 @@
       
       // 방법 2. 변수 이용
       /*
-      var price = 1500
+      var price = 1500        // 방법 2는 변수에 값을 대입해 결과물을 출력한다.
       var buy_num = 3
       var pay = 10000
       var change = pay - (price & buy_num);
@@ -36,7 +36,7 @@
       
       // 방법 3. prompt 이용
       /*
-      var price = prompt("가격을 입력하세요: ");
+      var price = prompt("가격을 입력하세요: ");      // 방법 3은 그냥 궁금해서 작성을 해보았다. 
       var buy_num = prompt("구매 개수를 입력하세요: ");
       var pay = prompt("지불 금액을 입력하세요: ");
 
