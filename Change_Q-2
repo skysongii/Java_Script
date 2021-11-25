@@ -1,0 +1,57 @@
+- 개당 가격 : 1500원
+- 구매 개수 : 3개
+- 지불 금액 : 10000원
+거스름돈은 5500원입니다.
+
+출력하기
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <script>
+      // 방법 1. 텍스트만 이용    
+      /*
+      document.write("- 개당 가격 : 1500원<br>");
+      document.wirte("- 구매 개수 : 3개<br>");
+      documnet.write("- 지불 금액 : 10000원<br>");
+      document.write("거스름돈은 5500원입니다.");
+      */
+      
+      // 방법 2. 변수 이용
+      /*
+      var price = 1500
+      var buy_num = 3
+      var pay = 10000
+      var change = pay - (price & buy_num);
+
+      document.write("- 개당 가격 : " + price + "원<br>");
+      document.write("- 구매 개수 : " + buy_num + "원<br>");
+      document.write("- 지불 금액 : " + pay + "원<br>");
+      document.write("거스름돈은 " + change + "입니다");
+      */
+      
+      // 방법 3. prompt 이용
+      /*
+      var price = prompt("가격을 입력하세요: ");
+      var buy_num = prompt("구매 개수를 입력하세요: ");
+      var pay = prompt("지불 금액을 입력하세요: ");
+
+      price = Number(price);
+      buy_num = Number(buy_num);
+      pay = Number(pay);
+
+      change = pay - (price * buy_num);
+
+      document.write("- 개당 가격: " + price + "원<br>");
+      document.write("- 구매 개수: " + buy_num + "개<br>");
+      document.write("- 지불 금액: " + pay + "원<br>");
+      document.write("거스름돈은 " + change + "입니다");
+      */
+    </script>
+  </body>
+</html>
+
