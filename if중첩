@@ -55,3 +55,30 @@ if 중첩문 예제를 풀다가 나와있는대로만 하면 재미가 없어�
 </script>
 </body>  
 </html>
+
+하다보니 버튼을 이용한 출력도 가능할 것 같아서 만들어보았다.
+
+<div id="btn1"></div>
+<div id="btn2"></div>
+<div id="btn3"></div>
+<script>
+    var admin_pwd = "86309414";     // 모든 권한을 가지고 있는 관리자 비밀번호
+    var level1_pwd = "level1!";     // 읽기 권한만 가지고 있는 레벨1 비밀번호
+    var level2_pwd = "level2@";     // 읽기, 쓰기 권한을 가지고 있는 레벨2 비밀번호
+
+    window.alert("해당 컨텐츠 실행 권한 확인과정입니다.");
+    var name = prompt("아이디를 입력하세요 : ");
+    
+    if (name == "admin") {
+        var admin_input_pwd = prompt("비밀번호를 입력하세요");
+        if (admin_input_pwd == admin_pwd) {
+            window.alert("해당 컨텐츠의 관리자 권한으로 접속하였습니다.");
+            document.getElementById("btn1").innerHTML = "<input type='button' value='읽기'>";
+            document.getElementById("btn2").innerHTML = "<input type = 'button' value =? '쓰기'>";
+            document.getElementById("btn3").innerHTML = "<input type = 'button' value = '실행'>";
+
+        }
+        
+    }
+</script>
+
