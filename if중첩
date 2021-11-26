@@ -1,0 +1,57 @@
+if 중첩문 예제를 풀다가 나와있는대로만 하면 재미가 없어서 약간 변형을 했다
+
+원래문
+<script>
+    var userid = prompt("아이디를 입력하세요.");
+    if (userid == "admin") {
+        document.write("해당 콘텐츠 이용이 가능합니다!");  
+    }
+    else {
+        level = Number(prompt("회원 레벨을 입력해 주세요 ."));
+        if (level>=1 && level<=7) {
+            document.write("해당 콘텐츠 이용이 가능합니다!");
+        }
+        else {
+            document.write("해당 콘텐츠에 접근할 수 없습니다!");
+        } 
+    } 
+</script>
+
+수정문
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<script>
+    
+    var admin_pwd = "86309414";     // 모든 권한을 가지고 있는 관리자 비밀번호
+    var level1_pwd = "level1!";     // 읽기 권한만 가지고 있는 레벨1 비밀번호
+    var level2_pwd = "level2@";     // 읽기, 쓰기 권한을 가지고 있는 레벨2 비밀번호
+    
+
+    window.alert("해당 컨텐츠 실행 권한 확인 과정입니다.");
+    var userid = prompt("아이디를 입력하세요.");
+
+    if (userid == "admin") {
+        var input_ad_pwd = prompt("비밀번호를 입력하세요 : ");
+        if (input_ad_pwd == admin_pwd) {
+            document.write("해당 컨텐츠에 777권한으로 접속하였습니다.");
+        }
+        else {
+            document.write("비밀번호가 틀렸습니다.");
+        }
+    }
+    else {
+        var input_lev_pwd = prompt("레벨에 대한 암호를 입력하세요 : ");
+        if (input_lev_pwd == level1_pwd) {
+            document.write("읽기 권한을 가지고 있는 레벨에 접속하였습니다.");
+        }
+        else if (input_lev_pwd == level2_pwd) {
+            document.write("읽기, 쓰기 권한을 가지고 있는 레벨에 접속하였습니다.");
+        }
+    }
+</script>
+</body>  
+</html>
