@@ -1,0 +1,28 @@
+ <body>
+        <div id = "result"></div>
+        <script>
+            var hour_pay  = 10000;    // 시급
+            var work_time = 8;        // 근무 시간
+            var time = Number(prompt("파트 타임을 입력하세요 : ")); // 1.주간 2.야간
+            var day_night;  // 주간 또는 야간
+            var night_pay = 1.5;  // 야간수당
+            var total_pay;  // 알바비
+
+
+            if (time == 1) {
+                day_night = "주간";
+                total_pay = hour_pay * work_time;
+            }
+            else {
+                day_night = "야간";
+                total_pay = hour_pay * work_time * night_pay;
+            }
+            
+            message = "-" + day_night + "근무 시간 : " + work_time + "시간<br>";
+            message += "-아르바이트 급료 : " + total_pay + "원";
+
+            document.getElementById("result").innerHTML = message;
+        </script>
+</body>
+위같은 방법이 있다.
+만약 근무 시간도 입력받아서 근무 시간 도중 야간 수당을 받는 시간이 겹치게 하는 구문도 생각 중이다.
