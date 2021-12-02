@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="result"></div>"
+    <script>
+        /* 할인율
+         - 10000원 이상 ~ 50000원 미만 : 5%
+        - 50000원 이상 ~ 300000원 미만 : 7.5%
+        - 300000원 이상 : 10% 
+        - 할인 금액 : 구매 금액 * (할인율 / 100)*/
+
+        var dc_pay;     // 할인금액
+        var dc_rate;    // 할인율
+        var buy_money = Number(prompt("구매 금액 : "));     // 구매 금액
+        var pay_money;  // 지불 금액
+        var message;    // 출력문
+
+        if (buy_money >= 10000 && buy_money < 50000) {
+            dc_rate = 5;
+            dc_pay = buy_money * (dc_rate / 100);
+            pay_money = buy_money - dc_pay;
+        }
+        else if (buy_money >= 50000 && buy_money < 300000) {
+            dc_rate = 7.5;
+            dc_pay = buy_money * (dc_rate / 100);
+            pay_money = buy_money - dc_pay;
+        }
+        else if (buy_money >= 300000) {
+            dc_rate = 10;
+            dc_pay = buy_money * (dc_rate / 100);
+            pay_money = buy_money - dc_pay;
+        }
+        else {
+            document.write("잘못 입력했습니다.");
+            
+        }
+        message = "구매 금액 : " + buy_money + "원<br>";
+        message += "할인율 : " + dc_rate + "%<br>";
+        message += "할인 금액 : " + dc_pay + "원<br>";
+        message += "지불 금액은 " + pay_money + "원입니다.";
+            document.getElementById("result").innerHTML = message;
+    </script>
+</body>
+
+</html>
