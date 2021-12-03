@@ -1,0 +1,60 @@
+책 답과는 다르게 조건을 조금 추가해 보았다.
+조건 1. 섭씨인 경우에는 그대로 조건문을 따른다.
+조건 2. 화씨인 경우에는 섭씨로 변환한 후 조건문을 따른다.
+조건 3. 온도 타입 과정에서 섭씨(1) 혹은 화씨(2)가 아닐 경우 잘못되었다는 경고창을 출력한다.
+
+조건 3을 임의로 추가해 소스를 구성했다.
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div id="result"></div>
+    <script>
+        /* 화씨/섭씨 온도 환산식
+           섭씨 = (화씨 - 32) * 5 / 9 
+        
+           섭씨 100도 이상 : 기체
+           섭씨 0도 초과 ~ 100도 미만 : 액체
+           섭씨 0도 이하 : 고체 */
+        var temperature_type;
+        var temp_choice = prompt("온도 단위를 입력하세요 : ");  // 1.섭씨 , 2.화씨
+
+        if (temp_choice == "1" || temp_choice == "2") {   // 온도 타입이 섭씨 혹은 화씨인 경우에만 진행
+
+            var input_temperature = Number(prompt("온도 입력 : "));  // 온도를 입력받음
+            if (temp_choice == "2") {   // 온도 타입이 화씨인 경우에 섭씨로 변환
+                input_temperature = (input_temperature - 32) * 5 / 9;
+            }
+
+            if (input_temperature >= 100) {
+                temperature_type = "기체";
+            }
+            else if (input_temperature > 0 && input_temperature < 100) {
+                temperature_type = "액체";
+            }
+            else if (input_temperature < 0) {
+                temperature_type = "고체";
+            }
+
+        }
+        else {
+            window.alert("잘못 입력하셨습니다.");
+        }
+
+        var message;
+        message = "물의 섭씨 온도 : " + input_temperature + "도 <br>";
+        message += "물의 상태 : " + temperature_type + "입니다";
+
+        document.getElementById("result").innerHTML = message;
+
+
+    </script>
+</body>
+
+</html>
