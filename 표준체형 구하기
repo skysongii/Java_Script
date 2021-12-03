@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div id=bigger></div>
+        <div id=small></div>
+
+        <script>
+            /* 키 몸무게 입력받아 다이어트 유무 판정 프로그램 
+                판정 기준 : 
+                std = (키 - 100) * 0.9
+                몸무게가 std보다 큰 경우 '다이어트가 필요할 수 있습니다.' 출력
+                아닌 경우 '표준(또는 마른) 체형입니다! 출력' */
+            
+            var height = Number(prompt("키 : "));  // 키 입력
+            var weight = Number(prompt("몸무게 : "));  // 몸무게 입력
+            var std = (height - 100) * 0.9;  // 표준 체형 공식
+            var message;  // 결과물 출력
+
+            if (weight > std) {
+                message = "키 : " + height + "cm<br>";
+                message += "몸무게 : " + weight + "kg<br>";
+                message += "다이어트가 필요할 수 있습니다.";
+                document.getElementById("bigger").innerHTML = message;
+            }
+            
+            else {
+                message = "키 : " + height + "cm<br>";
+                message += "몸무게 : " + weight + "kg<br>";
+                message += "표준(또는 마른) 체형입니다.";
+                document.getElementById("small").innerHTML = message;
+            }
+        </script>
+    </body>
+</html>
