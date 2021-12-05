@@ -1,2 +1,2 @@
 # Java_Script
-Java Sciprt &amp; J query
+Java Sciprt &amp;
