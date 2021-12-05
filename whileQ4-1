@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+    <div id="result"></div>
+<script>
+    // while 문을 이용해 다섯 개의 이미지 파일을 자동으로 삽입하는 프로그램
+    var contents = "";  // 컨텐츠에 공백을 넣어주지 않고 변수만 선언하면 undefined가 출력됨.
+    var num = 1;    // while 반복문에 쓰일  num 변수를 1로 선언
+    var file_name;  // file_name에 경로를 넣어줌으로써 효과적인 이미지 파일 불러오기 가능
+
+    while (num <= 5) {
+        file_name = "img/image" + num + ".png";   // file_name에 "img/imgage + 반복문 num의 수 + ".png"를 대입함으로써 image1,2,3,4,5 간단하게 출력 가능
+        contents += "<img src =' " + file_name + "'>";    // <img src = 'file_name'>을 대입함으로써 쉽게 출력 가능
+        num++;  // num의 숫자를 1씩 증가시키며 각각 다른 이미지 파일 불러오기
+    }
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>
