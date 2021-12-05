@@ -1,0 +1,36 @@
+책의 원본과 다르게 구글링을 통해서 
+테이블을 더 간단하게 만드는 방법을 찾아서 작성했다.
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="result"></div>
+    <table border='1'>
+        <tr>
+            <th colspan="2">번호 이름</th>
+            <th>직책</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td colspan="2">1 최선호</td>
+            <td>주임</td>
+            <td>대죽동로 40</td>
+        </tr>
+        <tr>
+            <td colspan="2">2 이유진</td>
+            <td>사원</td>
+            <td>대죽동로 40</td>
+        </tr>
+
+
+    </table>
+    <script>
+    </script>
+</body>
+
+</html>
