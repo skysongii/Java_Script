@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var contents = "";
+
+    for (i = 1; i <= 10; i++) {
+        for(j = 1; j <= i; j++) {   // 공백 반복은 j <= 10이 아니라 i 만큼 돌아야 한다. 만약 10으로 정해놓는다면 전체 줄에 전부 10칸의 공백이 생긴다.
+            contents += "&nbsp;";
+        }
+        for(j = 1; j <= 10-i; j++) {    // *의 개수는 첫줄부터 10-i 만큼씩만 출력되게 한다.
+            contents += "*";
+        }
+        contents += "<br>";
+    }
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>
