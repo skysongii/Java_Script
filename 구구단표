@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    table {border-collapse: collapse;}
+    th, td {border : solid 1px gray;}
+    th {padding: 5px; background-color: skyblue;}
+    td {padding: 5px; text-align: center;}
+    
+</style>
+</head>	
+<body>
+<div id="result"></div>
+<script>
+    var contents = "";
+
+    contents += "<h3>구구단표</h3>";
+    contents += "<table>";
+    contents += "<tr><th>2단</th>";
+    contents += "<th>3단</th>";
+    contents += "<th>4단</th>";
+    contents += "<th>5단</th>";
+    contents += "<th>6단</th>";
+    contents += "<th>7단</th>";
+    contents += "<th>8단</th>";
+    contents += "<th>9단</th>";
+
+    for (j = 1; j <= 9; j++) {
+        contents += "<tr>";
+        for(i = 2; i<=9; i++) {
+            contents += "<td>" + i + " * " + j + " = " + (i*j) +"</td>";
+        }
+        contents += "</tr>";
+    }
+    contents += "</table>";
+    document.getElementById("result").innerHTML = contents;
+</script>
+</body>  
+</html>
