@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="result"></div>
+        <script>
+            // while 문을 이용해 1~100 까지 정수 중 홀수 합계를 구하는 프로그램
+            
+            var num = 0;
+            var sum = 0;
+
+            while(num <= 100) {
+                if( num % 2 == 1) {
+                    sum += num;
+                }
+                num++;
+            }
+            document.getElementById("result").innerHTML = "1 ~ 100 중 홀수 합 : " + sum;
+        </script>
+    </body>
+</html>
