@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+        <div id="result"></div>
+        <script>
+            /* // 화씨 = 섭씨 * 9/5 + 32 for버전
+            var contents;
+            var c, f;
+
+            contents = "----------------<br>";
+            contents += "섭씨   화씨<br>";
+            contents += "----------------<br>";
+
+            for(c=0; c<=30; c+=5) {
+                f = c * 9/5 + 32;
+                contents += c + "&nbsp;&nbsp;&nbsp;&nbsp;" + f + "<br>";
+            }    
+            contents += "----------------";
+            document.getElementById("result").innerHTML = contents; */
+
+            // while 버전
+            var contents;   // 결과물 출력할 변수
+            var c, f;   // 섭씨, 화씨 변수 선언
+
+            contents = "-------------<br>";
+            contents += "섭씨   화씨<br>";
+            contents += "-------------<br>";
+            c = 0;  // 섭씨를 0으로 고정, 입력받아도 상관 없다고 생각
+
+            while(c <= 30) {
+                f = c * 9/5 + 32;   // 화씨 변환 공식의 입력 순서를 첫 번째로 해놓아야 오류가 없음
+                contents += c + "&nbsp;&nbsp;&nbsp;&nbsp;" + f + "<br>";
+                c += 5;
+            }
+            contents += "-------------";
+
+            document.getElementById("result").innerHTML = contents;
+        </script>
+    </body>
+</html>
