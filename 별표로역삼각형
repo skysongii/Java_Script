@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div id="result"></div>
+        <script>
+            var contents = "";  // 컨텐츠 변수에 문자를 더해야 하기 때문에 공백을 대입함
+            for (i=0; i<10; i++) {  // 총 10줄의 *을 출력
+                for(j=10; j>10-i; j--) {    // j를 10으로 선언하고 10에서 i를 뺀만큼 공백을 입력
+                                            // ex) j=10이고 i가 1일 경우 j는 j는 10에서 i를 뺀 9까지 1만큼의 공백을 반환
+                    contents += "&nbsp;";
+                }
+                for(j=10; j>0 + i; j--) {   // 공백을 제외한 나머지 칸에 별을 입력
+                    contents += "*"; 
+                }
+                contents += "<br>";
+            }
+        document.getElementById("result").innerHTML = contents;
+        </script>
+    </body>
+</html>
